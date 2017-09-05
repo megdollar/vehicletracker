@@ -6,7 +6,7 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
 	
 }
 
-@media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     .map-anything .slds-max-medium-table--stacked {
       border: 0; }
       .map-anything .slds-max-medium-table--stacked thead {
@@ -57,58 +57,7 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
         visibility: visible; }
       .map-anything .slds-max-medium-table--stacked .slds-cell-shrink {
         width: auto; } }
-  @media (max-width: 48em) {
+  @media screen and(max-width: 48em) {
     .map-anything .slds-max-medium-table--stacked td:before,
     .map-anything .slds-max-medium-table--stacked th:before {
       padding-bottom: 0.25rem; } }
-  @media (max-width: 48em) {
-    .map-anything .slds-max-medium-table--stacked-horizontal {
-      border: 0; }
-      .map-anything .slds-max-medium-table--stacked-horizontal thead {
-        position: absolute !important;
-        margin: -1px !important;
-        border: 0 !important;
-        padding: 0 !important;
-        width: 1px !important;
-        height: 1px !important;
-        overflow: hidden !important;
-        clip: rect(0 0 0 0) !important; }
-      .map-anything .slds-max-medium-table--stacked-horizontal th {
-        border-top: 0; }
-      .map-anything .slds-max-medium-table--stacked-horizontal tr {
-        display: block;
-        border-top: 2px solid #d8dde6; }
-      .map-anything .slds-max-medium-table--stacked-horizontal th,
-      .map-anything .slds-max-medium-table--stacked-horizontal td {
-        display: block;
-        padding: 0.75rem;
-        max-width: 100%;
-        width: 100%;
-        clear: both;
-        white-space: normal;
-        overflow: hidden;
-        text-align: center; }
-        .map-anything .slds-max-medium-table--stacked-horizontal th.slds-truncate,
-        .map-anything .slds-max-medium-table--stacked-horizontal td.slds-truncate {
-          max-width: 100%; }
-        .map-anything .slds-max-medium-table--stacked-horizontal th:before,
-        .map-anything .slds-max-medium-table--stacked-horizontal td:before {
-          font-size: 0.75rem;
-          line-height: 1.25;
-          color: #54698d;
-          text-transform: uppercase;
-          letter-spacing: 0.0625rem;
-          display: block;
-          padding-bottom: 0.25rem;
-          content: attr(data-label); }
-      .map-anything .slds-max-medium-table--stacked-horizontal tr > td:first-child,
-      .map-anything .slds-max-medium-table--stacked-horizontal tr > td:last-child {
-        padding: 0.75rem; }
-      .map-anything .slds-max-medium-table--stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover td,
-      .map-anything .slds-max-medium-table--stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover th {
-        background-color: inherit !important;
-        box-shadow: none !important; }
-      .map-anything .slds-max-medium-table--stacked-horizontal .slds-is-interactive .slds-button {
-        visibility: visible; }
-      .map-anything .slds-max-medium-table--stacked-horizontal .slds-cell-shrink {
-        width: auto; } }

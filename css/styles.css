@@ -6,7 +6,7 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
 	
 }
 
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 768em) {
     .map-anything .slds-max-medium-table--stacked {
       border: 0; }
       .map-anything .slds-max-medium-table--stacked thead {
@@ -57,7 +57,7 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
         visibility: visible; }
       .map-anything .slds-max-medium-table--stacked .slds-cell-shrink {
         width: auto; } }
-  @media screen and(max-width: 48em) {
+  @media screen and(max-width: 768em) {
     .map-anything .slds-max-medium-table--stacked td:before,
     .map-anything .slds-max-medium-table--stacked th:before {
       padding-bottom: 0.25rem; } }

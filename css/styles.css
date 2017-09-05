@@ -49,10 +49,6 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
       .map-anything .slds-max-medium-table--stacked-horizontal tr > td:first-child,
       .map-anything .slds-max-medium-table--stacked-horizontal tr > td:last-child {
         padding: 0.75rem; }
-      .map-anything .slds-max-medium-table--stacked-horizontal .slds-is-interactive .slds-button {
-        visibility: visible; }
-      .map-anything .slds-max-medium-table--stacked-horizontal .slds-cell-shrink {
-        width: auto; } }
   @media screen and (max-width: 48em) {
     .map-anything .slds-max-medium-table--stacked-horizontal td {
       text-align: right; }

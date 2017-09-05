@@ -6,7 +6,7 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
 	
 }
 
-button.slds-button.scroll{ 
+button.map-anything.slds-button.scroll{ 
     display: none;  
     position: fixed; 
     bottom: 20px; 
@@ -15,8 +15,9 @@ button.slds-button.scroll{
     background-color: #FFA500;  
     color: white;
     padding: 5px;
+  }
+  button.slds-button.scroll a {
     text-decoration: none;
-  
   }
 .button {
     width: 75px;

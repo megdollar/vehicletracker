@@ -1,0 +1,84 @@
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Vehicle Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" owner="text/css" href="vendor/lightning/assets/styles/salesforce-lightning-design-system-ltng.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="map-anything slds-scope">
+
+    <!-- MASTHEAD -->
+    <div class="map-anything slds-page-header slds-text-align--center">
+      <p class="map-anything slds-page-header__title">
+        Map Anything Vehicle Monitoring
+      </p>
+    </div>
+    <!-- / MASTHEAD -->
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp map-anything">
+
+      <div class="map-anything slds-grid">
+
+      <div class="map-anything slds-p-around--medium slds-col slds-size--3of-3">
+        <h2 class="map-anything slds-text-heading--medium slds-m-top--large slds-text-align--center">Vehicles</h2>
+
+
+      <div class="map-anything slds-form-element slds-form--inline slds-align--absolute-center">
+        <label class="slds-form-element__label" for="search-rule">Search Rule</label>
+        <div class="slds-form-element__control slds-p-vertical--medium slds-m-right--medium">
+          <input type="text" id="search-rule" class="map-anything slds-input" placeholder="Rule">
+        </div>
+        <label class="slds-form-element__label" for="search-region">Search Region</label>
+          <div class="slds-form-element__control slds-p-vertical--medium">
+            <input type="text" id="search-region" class="map-anything slds-input" placeholder="Region">
+        </div>
+      </div>
+ 
+      <table id="myTable" class="map-anything slds-table slds-table--striped slds-table--bordered slds-max-medium-table--stacked slds-border--left slds-border--right slds-border--bottom">
+        <thead>
+          <tr class="map-anything slds-text-heading--label">
+            <th scope="col">
+              <div class="slds-truncate" title="Vehicle Rule">Vehicle Rule</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Status">Status</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Region">Region</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Created By">Created By</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Created Date">Created Date</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+
+      <button class="map-anything slds-button refresh slds-m-vertical--medium slds-align--absolute-center"><a href="index.html">Refresh</a></button>
+
+    </div> 
+
+
+    </div>
+
+    <!-- / PRIMARY CONTENT WRAPPER -->
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->
+  <script src="js/app.js"></script>
+</body>
+</html>

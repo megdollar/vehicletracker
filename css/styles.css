@@ -3,6 +3,7 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
   color: white;
 	padding: 5px 20px 5px 20px;
 	text-decoration: none;
+	
 }
 
 button.slds-button.scroll{ 
@@ -14,8 +15,15 @@ button.slds-button.scroll{
     background-color: #FFA500;  
     color: white;
     padding: 5px;
+    text-decoration: none;
+  
   }
-
+.button {
+    width: 75px;
+  }
+h2.map-anything.slds-text-heading--medium.slds-m-top--large.slds-text-align--center, tr.map-anything.slds-text-heading--label{
+  color: #FFA500;
+}
 
   @media screen and (max-width: 48em) {
     .map-anything .slds-max-medium-table--stacked-horizontal {

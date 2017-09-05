@@ -115,7 +115,7 @@ var data =[
 				this.className = "map-anything slds-button slds-button--neutral slds-button--brand button";
 				this.innerHTML = "Active";
 			}
-			setTimeout(function() { alert('Status has been changed.')}, 2000);
+			setTimeout(function() { alert('Status has been changed.')}, 1000);
 	};
 
 	// attach keyup event listener to search-rule input

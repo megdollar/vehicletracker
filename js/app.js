@@ -76,9 +76,9 @@ var data =[
  var ViewModel = function() {
 
  	var table = document.getElementById("tbody");
-	var tbody = '<tbody>'
+	var tbody = '<tbody>';
 
-    for(i = 0;i < data.length; i++){
+    for(var i = 0;i < data.length; i++){
         tbody += '<tr>';
         tbody += '<td data-label="Vehicle Rule"><div class="slds-truncate">' + data[i].rule + '</div></td>';
         tbody += '<td data-label="Status"><div class="slds-truncate slds-form-element"><button class="button" aria-live="assertive">'+ data[i].status + '</button></div></td>';
@@ -102,7 +102,7 @@ var data =[
     		button.className = "map-anything slds-button slds-button--neutral slds-button--destructive button";
     	}
     	button.onclick = toggleClass;
- 	};
+ 	}
 
  	//toggle styling and innerHTML on click
  	function toggleClass(){
@@ -115,44 +115,36 @@ var data =[
 				this.className = "map-anything slds-button slds-button--neutral slds-button--brand button";
 				this.innerHTML = "Active";
 			}
-			setTimeout(function() { alert('Status has been changed.')}, 1000);
-	};
+			setTimeout(function() { alert('Status has been changed.');}, 1000);
+	}
 
 	// attach keyup event listener to search-rule input
-	document.getElementById("search-rule").addEventListener("keyup", searchRule);
+	document.getElementById("search-rule").addEventListener("keyup", searchVehicle);
+  document.getElementById("search-region").addEventListener("keyup", searchVehicle);
 
-	function searchRule(event) {
+  var ruleEl = document.getElementById("search-rule");
+
+	function searchVehicle(event) {
+    var colRule;
 		// convert input to uppercase
     	var filter = event.target.value.toUpperCase();
     	// select rows in tbody
     	var rows = document.querySelector("#myTable tbody").rows;
-
-    	// loop through the rows within the first column (vehicle rule)
-    	// if not in input, hide row
+    	// loop through the rows 
+      // if the input searches by rule, search the first column
+      // else search the 3rd column (region)
+      // if in input show the row, if not in input, hide row
     	for (var i = 0; i < rows.length; i++) {
-        	var colRule = rows[i].cells[0].textContent.toUpperCase();
-        	if (colRule.indexOf(filter) > -1) {
-            	rows[i].style.display = "";
-        	} else {
-            	rows[i].style.display = "none";
-        	}      
+        if (event.target === ruleEl) {
+        	colRule = rows[i].cells[0].textContent.toUpperCase();
+        } else {
+          colRule = rows[i].cells[2].textContent.toUpperCase();
+        }
+        rows[i].style.display = (colRule.indexOf(filter) > -1) ? "" : "none";
+ 
     	}
 	}
 
-	document.getElementById("search-region").addEventListener("keyup", searchRegion);
-	function searchRegion(event) {
-    	var filter = event.target.value.toUpperCase();
-
-    	var rows = document.querySelector("#myTable tbody").rows;
-    	for (var i = 0; i < rows.length; i++) {
-        	var colRegion = rows[i].cells[2].textContent.toUpperCase();
-        	if (colRegion.indexOf(filter) > -1) {
-            	rows[i].style.display = "";
-        	} else {
-            	rows[i].style.display = "none";
-        	}      
-    	}
-	}
-}
+};
 
 ViewModel();

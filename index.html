@@ -1,6 +1,6 @@
 
  <!DOCTYPE html>
- <html>
+ <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -33,18 +33,24 @@
         <h2 class="map-anything slds-text-heading--medium slds-m-top--large slds-text-align--center">Vehicles</h2>
 
 
-      <div class="map-anything slds-form-element slds-form--inline slds-align--absolute-center">
+      <div class="map-anything slds-form-element slds-form--inline slds-align--absolute-center slds-p-vertical--medium ">
         <label class="slds-form-element__label" for="search-rule">Search Rule</label>
-        <div class="slds-form-element__control slds-p-vertical--medium slds-m-right--medium">
+        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left slds-m-right--medium">
+            <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="vendor/lightning/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+            </svg>
           <input type="text" id="search-rule" class="map-anything slds-input" placeholder="Rule">
         </div>
         <label class="slds-form-element__label" for="search-region">Search Region</label>
-          <div class="slds-form-element__control slds-p-vertical--medium">
+          <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+            <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="vendor/lightning/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+            </svg>
             <input type="text" id="search-region" class="map-anything slds-input" placeholder="Region">
         </div>
       </div>
  
-      <table id="myTable" class="map-anything slds-table slds-no-row-hover slds-table--striped slds-table--bordered slds-max-medium-table--stacked-horizontal slds-border--left slds-border--right slds-border--bottom">
+      <table id="myTable" class="map-anything slds-table slds-table--striped slds-table--bordered slds-max-medium-table--stacked-horizontal slds-border--left slds-border--right slds-border--bottom">
         <thead>
           <tr class="map-anything slds-text-heading--label">
             <th scope="col">
@@ -70,6 +76,11 @@
       </table>
 
       <button class="map-anything slds-button refresh slds-m-vertical--medium slds-align--absolute-center"><a href="index.html">Refresh</a></button>
+      
+    <button id="scrollBtn" class="slds-button scroll">
+      <svg class="slds-button__icon slds-button__icon_left slds-button__icon--large" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="vendor/lightning/assets/icons/utility-sprite/svg/symbols.svg#up"></use>
+      </svg>Top</button>
 
     </div> 
 

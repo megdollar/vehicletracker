@@ -1,10 +1,21 @@
 button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh a {
 	background-color: #FFA500;
-	color: black;
+  color: white;
 	padding: 5px 20px 5px 20px;
 	text-decoration: none;
-	
 }
+
+button.slds-button.scroll{ 
+    display: none;  
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: #FFA500;  
+    color: white;
+    padding: 5px;
+  }
+
 
   @media screen and (max-width: 48em) {
     .map-anything .slds-max-medium-table--stacked-horizontal {
@@ -49,6 +60,14 @@ button.map-anything.slds-button.refresh, button.map-anything.slds-button.refresh
       .map-anything .slds-max-medium-table--stacked-horizontal tr > td:first-child,
       .map-anything .slds-max-medium-table--stacked-horizontal tr > td:last-child {
         padding: 0.75rem; }
+      .map-anything .slds-max-medium-table--stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover td,
+      .map-anything .slds-max-medium-table--stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover th {
+        background-color: inherit !important;
+        box-shadow: none !important; }
+      .map-anything .slds-max-medium-table--stacked-horizontal .slds-is-interactive .slds-button {
+        visibility: visible; }
+      .map-anything .slds-max-medium-table--stacked-horizontal .slds-cell-shrink {
+        width: auto; } }
   @media screen and (max-width: 48em) {
     .map-anything .slds-max-medium-table--stacked-horizontal td {
       text-align: right; }

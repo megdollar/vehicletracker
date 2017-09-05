@@ -103,7 +103,6 @@ var data =[
     	}
     	button.onclick = toggleClass;
  	}
-
  	//toggle styling and innerHTML on click
  	function toggleClass(){
  			console.log(this);
@@ -144,6 +143,32 @@ var data =[
  
     	}
 	}
+  document.getElementById("scrollBtn").addEventListener("click", scrollToTop);
+  scrollBtn = document.getElementById("scrollBtn");
+  var timeOut;
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  //toggle display of button when document is scrolled
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+  }
+
+  function scrollToTop(){
+  //check to see if page is at top of window
+    if (document.body.scrollTop!=0 || document.documentElement.scrollTop!= 0){
+      // grab the window and scroll by -50px to the top
+      window.scrollBy(0,-50);
+      // set timeout to repeat the scroll to top finction every 10 ms until reach top of page
+      timeOut = setTimeout(scrollToTop, 10);
+    }
+    else clearTimeout(timeOut);
+    scrollBtn.style.display = "none";
+  }
+
 
 };
 
